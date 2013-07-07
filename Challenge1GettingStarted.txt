@@ -1,0 +1,10 @@
+﻿1. Giving directions to a friend and giving directions to a computer program are very different because the instructions a computer program needs are much more specific than what a human being needs.
+
+
+2. Machine code is a language consisting of numerical operations that the computer understands. Because of the numerical syntax it is practically unreadable and unwritable by humans. Source code is a language that is written in a syntax that is easier to write and then translated into machine code so it can run on a computer.
+
+
+3. IDE stands for Integrated development environment. It is a large program that includes a programmers’ text editor and also a bunch of features for professional development. Xcode is Apple’s IDE and Visual Studios is Microsoft’s IDE. It is useful because it makes coding easier and more efficient. Features such as auto completing your code, line numbers, and search and replace functions make coding much quicker.
+
+
+4. Objective-C is a compiled language. Because our programs run on only one platform, it is best to use a compiled language. It will be ready to run, it will run fast, and the source code will be private. An interpreted language is not optimal for iPhone and iPad apps because there is no need for the code to be cross-platform. It will also run slower because the machine will need an interpreter that will interpret the code each time the app is run.
