@@ -1,0 +1,255 @@
+﻿Section 1 - Getting Started
+
+
+1.3 It is important to be aware of idiosyncrasies between older versions of OBjective-C and keep up with new features because programming languages are always changing. Theres always new things that keep on being added. You will see code written new ways and old ways when reading books, working on existing projects, etc and you will be expected to understand what it means.
+
+
+Section 2 - Objective-C Basics
+
+
+2.1 Objective-C is a superset of the C language. It is the same language as C but it has its own Objective-C parts added to it. Objective C became the main language for making iPhone apps because it was the main language of Next Computers. Objective C was used to make their NextStep operating system. When Apple bought Next, they built Mac OS on top of the Nextstep OS.
+
+
+2.3 You might want to deploy to an older version of iOS because the users of your app might not have the latest version of iOS on their device. Deploying to an older version will make sure that they will be able to run the app on their device.
+
+
+Section 3 - Program Flow
+
+
+3.1
+          int seconds = 60;
+            int minutes = 60;
+            int hours = 24;
+            int days = 365;
+            
+            int secondsIn10Years = days * hours * minutes * seconds *10;
+   
+            
+             NSLog(@"There are %i seconds in ten years.", secondsIn10Years);
+           
+
+
+3.2    int day = 7;
+            if ((day >= 1) && (day <= 5)){
+                NSLog(@"I hope you're having a good week!");
+            }
+                else {
+                    NSLog(@"Have a nice weekend!");
+
+
+3.3         int hurricaneCategory = 2;
+            
+            switch (hurricaneCategory) {
+                case 1:
+                    NSLog(@"It's a category 1.");
+                    break;
+                case 2:
+                    NSLog(@"It's a category 2.");
+                    break;
+                case 3:
+                    NSLog(@"It's a category 3.");
+                    break;
+                case 4:
+                    NSLog(@"It's a category 4.");
+                    break;
+                case 5:
+                    NSLog(@"It's a category 5.");
+                    break;
+                default:
+                    NSLog(@"I don't know what it was!");
+                    break;
+
+
+3.4 Grabbing a new code snippet, indenting it, adding a comment, and saving it as a new code snippet took approximately 27 seconds to do.
+
+
+3.5 The six types of operators are: arithmetic, comparison, modulus,increment/decrement, prefix/postfix,ternary
+
+
+Arithmetic - used to calculate mathematical functions, + - * / =, result = (5 + 5) *10
+Comparison - used to compare two values; == != > < >= <=; if (a == b) { …
+Logical And/Or- used with multiple conditions; && ||; if (a==b || c==d ) {...
+Modulus - calculates a remainder, %, int year = 2003; int remainder = year %4//remainder is 3
+Increment/decrement - increases, decreases ; a++, a-- ; 
+Ternary - has three parts, this operator replaces the if else statement; 
+        int playerOne;
+        int playerTwo;
+
+
+        int highScore = (playerOne >playerTwo) ? playerOne : playerTwo;
+
+
+3.6 A scenario while us a mobile app that might require you to use a “continue” statement during a loop might be 
+3.7 A function is a block of code that perform commands to accomplish something.
+A function prototype is just a declaration of a function. The body of the function is declared elsewhere. You must declare a function before the function is run. 
+
+
+4.1 The primitive data types in Objective C are: int, float, double char, and BOOL. Apple added a set of classes to handle other data types in order to make it easier to work with other types of data such as strings, dates, images, video, buttons, and more complex types.
+
+
+4.2 - 4.3
+int
+	stores integer
+	float
+	floating-point number
+	double
+	double-precision floating-point number
+	char 
+	stores single character code, single quote
+	BOOL
+	YES or NO
+	
+
+4.4 The scope of a variable is within the statement block it is declared in. It only exists within the function or loop it was created in. If it is created inside the main function but outside of everything else, it exists everywhere within the main function. Declaring a variable outside of all functions makes it a global variable so it is accessible to everything.
+
+
+4.5 Enum allows you to define a range of value. The value of a variable can only equal what was passed through the enum.
+
+
+4.6 A typedef allows you to assign a new name to an existing variable. You can pass an enum through a typedef in order to make it easier to write out the enum over and over again. 
+
+
+4.7 Preprocessor directives- causes something to happen before code is compiled
+#import - includes content of the separate file into this file
+#define - creates a macro or a shortcut as a fixed value to be used anywhere in program
+#if DEBUG - #endif - scans through code and sees if you are compiling in debug mode. If so include the code between.
+
+
+4.8 NSString *message = @”Hello”; 
+NSString is the type. @”Hello” is the value. message is the name. * is the pointer. *message points to the piece of memory where the value “Hello” is stored.
+
+
+
+
+
+
+Section 5 - Classes
+
+
+5.1 mobileMakersParticipant
+PROPERTIES
+	METHODS
+	name
+height
+weight
+gender
+age
+	walk 
+run
+jump
+speak
+code
+	
+
+mobileMakersParticipant *Brian =[[ alloc]init;
+
+
+5.2 All objects are accessed using pointers. The pointer holds the address of where the object is located. It is different than a primitive because a primitive holds the value whereas a pointer just references a value.
+
+
+5.3 The biggest difference between Obj-c messages and methods is that a method that takes multiple arguments the method name becomes split apart into multiple pieces. This makes the name of methods that take a lot of arguments really long. One advantage to this is that each argument’s parameter has its own name/description which makes it easier to read and understand.
+
+
+5.4 The difference between a class method and an instance method is that an instance method needs an instance to work on. The class method works on the entire class.
+
+
+Section 6 - Memory Management
+6.2 When you create an object, it gets created in a block of memory. The pointer references the address of the block memory. By releasing the object, the block of memory is freed and the object is gone.
+
+
+6.3 When you use the new method to create an object, it allocates and initializes automatically. By using alloc and init, you can use different forms of initialization in order to pass information through the initialization. An object lasts forever until you release it.
+
+
+6.4 Autorelease adds the object to an autorelease pool. Every object within the pool gets released when you call the pool to be drained. You should use autorelease when you write a method that returns an object. You cannot include the release within the method because it would release the object before or after returning. 
+
+
+
+
+6.5 NARC stands for new, alloc, retain, and copy. It is important to remember this because if you used these words to create an object, you have to release these objects because you own them. Objects created other ways are autorelease objects.
+
+
+6.6  ARC stands for Automatic reference counting. You don’t have to write release or retain with ARC, the compiler does for you. The compiler scans through the code and synthesizes the release and retain at the best point for you. 
+
+
+6.7 ARC is different from garbage collection because garbage collection releases objects in sweeps at runtime when memory gets too large rather than during compile time. ARC figures out where the memory management code goes before the program is run. 
+
+
+6.8 ARC manages the memory for you. You do not have to release or dealloc. It will interfere with ARC.
+
+
+Section 7 - Custom Classes
+
+
+7.1 A class is created in two different sections: interface and implementation. This is commonly done in two different files. The interface is a .h file and it announces what this class will do, what methods it has, what properties it has. The implementation is a .m file. It is the real code of the class.
+
+
+7.2 
+
+
+7.3 Before 2012, instance variables were defined as regular variables inside a set of curly braces. The variable could only be manipulated inside the class and not outside it. It could only be manipulated outside if you created accessor methods: the getter and setter. Now instead of the accessor methods, we use a property keyword with a type and a name. in the implementation file you just at a matching synthesize. You also no longer need the instance variable. What got obscured is if you actually do want an instance variable that is not accessed outside of the class, it goes into the implementation file.
+
+
+7.4 Initializers are used to make sure objects are created in a valid state. So all the internal values are set to a meaningful amount. Custom inits are good for if you have simple initialization tasks also if you want a variety of init methods.
+
+
+7.5 With ARC, objects automatically call dealloc methods. You might need a dealloc if your object is holding onto a resource. You must release the connection before the object is destroyed.
+
+
+
+
+Chapter 8 - Collections
+
+
+8.1 There is no bounds checking. You can access elements that do not exist within an array. If you create an array with 5 slots but declare a value in a sixth slot, the piece of memory that the sixth value is in was not claimed properly. You cannot mix types in an array. Once an array is created, you cannot change the size of that array later.
+
+
+NSString *daysOfTheWeek [7] = {@”Monday”,@”Tuesday”, @”Wednesday”,@”Thursday”, @”Friday”, @”Saturday”, @”Sunday”};
+
+
+8.2 An immutable array cannot be changed after it has been created. A mutable array can be changed.
+
+
+NSArray *daysOfWeek=[NSArray arrayWithObjects:@”Monday”,@”Tuesday”, @”Wednesday”,@”Thursday”, @”Friday”, @”Saturday”, @”Sunday”, nil];
+
+
+NSMutableArray *daysAtMobileMakers = [NSMutableArray arrayWithObjects: @”Monday”,@”Tuesday”, @”Wednesday”,@”Thursday”, nil];
+
+
+[daysAtMobileMakers addObjects: @”Friday”, @”Saturday”, @”Sunday”];
+
+
+8.3 NSDictionary *events = [NSDictionary dictionaryWithObjectsAndKeys: @”1992”, @”Birth”, @”1997”, @”Kindergarten”, @”2010”, @”High School Graduation”, @”2013”, @”Mobile Makers”, @”2014”, @”College Graduation”, nil];
+
+
+8.4         for (NSString *lifeEvents in events) {
+                NSLog(@"%@ happenned in %@", lifeEvents, [events objectForKey:lifeEvents]);
+
+
+Section 9 - File Management
+
+
+9.1 Using the file management methods, you can copy file path or urls, you can move files, you can find out if a file exists or not, you can remove items. You can find file attributes.
+
+
+9.2 The three parts of a URL are : scheme (http,file://) domain (location, localhost), and path. The benefits of using NSURL are: they are faster and more efficient than string paths, they are better for catching errors because it won’t be created unless it is formed correctly, and there are more classes that can work with NSURLs.
+
+
+9.3 Writing data can be used to save progress in a game. The program writes the data of your progress which can be accessed the next time the game is opened.
+
+
+9.4 You would want to archive an object in order to store it away but then be able to pull it up again when you need it. It is more convenient than writing a bunch of strings to a file because it breaks apart all of the parts of the obj, gives them a key, and stores them away.
+
+
+Section 10 - More complex classes
+
+
+10.1 You can determine methods you’re inheriting by viewing the class reference. You can override an inherited method by providing your own version of it within the class. All you need to do is write a method with the same signature as the one in the superclass.
+
+
+10.2 A category allows us to add methods to an existing class without creating a custom class. By using inheritance, you create a custom class that inherits the methods and from there you can add more methods. The limitation of using a category is that you cannot add new instance variables.
+
+
+10.3 Protocols standardize interactions between objects. It is a list of methods you want an object to perform. Any class can perform these actions.
+
+
+10.4 Dynamic typing

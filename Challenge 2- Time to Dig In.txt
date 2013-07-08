@@ -1,0 +1,125 @@
+﻿Section 0 - Introduction
+0.1 Learning object oriented design is learning a set of ideas and techniques that can be used to solved problems. Object oriented design is not a formalized process. The purpose is to give you the tools needed to solves problems without limiting how the problem is solved. If you give the same problem to multiple programmers, you will end up with multiple outcomes. 
+
+
+0.2 Analyzing and designing is the process of understanding and planning your program before you you actually code it. It is advantageous to do because the more you know the easier it will be to code. You need to analyze to understand the problem and design the solution before you actually code it.
+
+
+0.3 A waterfall approach is a strict linear plan with a number of strict steps. You go through the plan following each step, finishing one and moving on the next step. The problem with this approach is that it doesn’t work well for software. When you implement the code at the end of the waterfall, you’re going to run into problems or need to make changes in the first step. Software development needs to be responsive. Things will always change which means we need to use continual development. An agile approach involves multiple cycles. Each cycle has its own analysis, design, and programming. It is good for programming because you don’t have to know everything up front. You can keep adding things and changing things. Each cycle is called an iteration. It is one version of the program. Each iteration builds upon the last with changes to improve the program.
+
+
+Section 1 - Core Concepts
+1.1 There is logic programming languages and functional programming languages that are used in the academic world or computational linguistics. Object oriented design is used in the practical world of creating web apps or mobile apps.
+
+
+1.2 A computer object has three properties: identity, attributes, and behavior. Objects are self-contained; they are separate from other objects. Objects have attributes that describe their current state. They have their own behaviors or things they can do.
+
+
+1.3 Classes are used to create objects. It describes what the object will be, but it is not the object itself, similar to a blueprint. A blueprint is a plan for how to build a house. It is not the house itself. A blueprint can also be used to build multiples of the same house similar to classes. Multiple objects can be created based on one class.
+
+
+1.4  Abstraction is focusing on the essential qualities of something. You automatically ignore what is irrelevant or unimportant. When describing the abstraction of an object, you focus on attributes that each instance of an object has in common.
+
+
+
+
+1.5 Encapsulation restricts access to some of an objects components. By restricting access to data, it reduces dependency by different parts of the application. Changing one thing will not affect everything else in the program. When you build a program, you enclose everything and only expose what is absolutely necessary to expose.
+
+
+1.6 Inheritance is a way to reuse code in order to create classes that have similarities. When a class inherits from another class, it makes a copy of all of the attributes. You can then add new attributes to the new class. If a customer class inherits the attributes of a person class, the person class is considered the Superclass (parent class) whereas the new customer class is the Subclass (child class). A change in the superclass will automatically change in any of its subclasses.
+
+
+1.7 Polymorphism means many forms. It allows us to automatically do the correct behavior even if what we’re working with has multiple behaviors. It allows our classes to be more flexible because we can create multiple classes using inheritance and have methods perform the correct behavior.
+
+
+Section 2 - Object-Oriented Analysis and Design
+
+
+2.1  The five steps of analysis are:
+1. Gather requirements - What does the app need to do and what problem are you trying to solve?
+2. Describe the app - Build a simple narrative about how people use the app. Use cases and User stores. Smallest set of stories that make this a real, usable application. Mockup of UI.
+3. Identify the main objects - This is the starting point of identifying classes. Picking out most important ideas and concepts of the application. Discard what is irrelevant.
+4. Describe the interactions - Behaviors of objects, how they interact with other objects. What they do and what order they do it in. Sequence diagram.
+5. Create a class diagram - visual representation of the classes you need. Inheritance and polymorphism.
+This makes it easier to write the code because it helps you to narrow down everything that is necessary. You will know exactly what you need and what you do not need.
+
+
+2.2 After your first phase of defining requirements you should have a list of all requirements for your app. There are functional requirements (features of app), usability requirements (help, documentations, tutorials), reliability requirements (disaster recovery), performance requirements (availability, capacity, resources) and supportability requirements (who maintains it, nationalized). There are also design requirements (constraint, iphone) , implementation requirements (language, methodology), interface requirements (external system that must be interfaced with), and physical requirements (physical constraints, need camera, etc).
+2.3 UML stands for Unified modeling language. It is a graphical notation used to draw diagrams of object oriented systems. These diagrams help us to visual the app and how it works before we actually code it. We will be able to visual how objects interact with each other.
+
+
+Section 3 - Utilizing Use Cases
+
+
+3.1 Title: Create event
+Actor: User
+Scenario: User opens calendar app. User finds date of event. User clicks add event button. User provides event name and time of event. User clicks done. Calendar app creates event.
+
+
+3.2 A use case for a mobile application where the actor is not the user could be apps such as snapchat where users send each other images. The actor would be the receiver. The action would be receiving the photo.
+
+
+3.3  Title: Create event
+Actor: User
+Scenario: User opens calendar app. User finds date of event. User clicks add button. User provides name and time of event. User clicks done. Calendar app creates event.
+
+
+Extension: Conflict in schedule
+(a) User may delete an event
+(b) User may override conflict
+
+
+3.4 Although the use case diagrams may look different, they all have the same basic parts. They all have multiple actors represented by stick figures. There are a bunch of use cases in ellipses with lines pointing to which actor will interact with them.  There is also a box around all of the use cases signifying that everything inside is part of the system, part of the knowledge base.
+
+
+3.5 As a user, I want to save recent searches so that I can quickly choose favorite destinations.
+As a cyclist, I want to find bike-friendly roads so I can create a safe bike route.
+As a traveller, I want to speak to type so that I can navigate hands free.
+As a tourist, I want to create tour routes so that I can plan my vacation.
+As a traveller, I want to see current status of traffic so that I can avoid busy streets.
+
+
+
+
+Section 4 - Domain modeling (Modeling the App)
+
+
+4.2 User, Event, Date, Time, Name
+4.3
+
+4.4 Name - Set name detail
+Date - Set date of event
+Time - Set duration of event
+Event - Processes event, confirm event
+
+
+4.5 CRC stands for class, responsibility, collaboration. It is the same information as a class relationship diagram on notecards.
+
+
+Section 5 - Creating Classes
+
+
+5.1 
+Tweet
+	message: String
+sentDate: Date
+	getMessage()
+getDate()
+	
+
+5.2 The interface says what methods exists while the implementation says how they do what they do. This could be advantageous when working with class diagrams because class diagrams already separate the attributes and behaviors making it simple to add attributes to the interface and behaviors to the implementation.
+
+
+
+
+5.3 The constructors in Objective C are new, allocate, copy, retain; deconstructors are deallocate, release, or delete. Constructors are used to create objects. Deconstructors are used to release resources.
+5.4 Three additional examples of data that would be the same for all instances of a class are 
+
+
+Section 6 - Inheritance and Composition
+
+
+6.1 Inheritance is when a subclass is created from a class. The subclass inherits all of the methods of the superclass. This is useful because it allows you to easily create classes without having to add all of the methods.
+
+
+6.2 A facebook comment might be a subclass of a status post.
